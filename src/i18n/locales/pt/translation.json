@@ -1,0 +1,83 @@
+{
+  "aHome": "Menu",
+  "aSobre": "Sobre",
+  "aExperiencias": "Experiências",
+  "aPortifolio": "Portfólio",
+  "aCursos": "Cursos",
+  "aContato": "Contato",
+  "oi": "Olá",
+  "euSou": "Eu sou",
+  "apresentacao": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+  "courses.title": "Cursos Concluídos",
+  "courses.description": "Aqui estão alguns dos cursos que concluí para aprimorar minhas habilidades e conhecimentos em diversas áreas.",
+  "cursos.list": {
+    "curso1": {
+      "title": "PYTHON COMPLETO: Do Zero ao Avançado (Seja um Programador)",
+      "description": "Curso completo de Python do zero ao avançado, com foco em projetos práticos, estruturas de dados, funções e manipulação de arquivos.",
+      "link": "https://www.udemy.com/course/python-completo-do-zero-ao-avancado-seja-um-programador-m/?couponCode=CP250105G1",
+      "duration": "10 horas"
+    },
+    "curso2": {
+      "title": "Formação Front-end - HTML, CSS, JavaScript, React e +",
+      "description": "Formação em desenvolvimento front-end do básico ao avançado, incluindo HTML e CSS para interfaces responsivas, JavaScript avançado, React com hooks e aplicação de TypeScript em projetos modernos.",
+      "link": "https://www.udemy.com/course/formacao-front-end-html-css-javascript-react-e/?couponCode=CP250105G1",
+      "duration": "51 horas"
+    },
+    "curso3": {
+      "title": "Curso de Hardware - Montagem e Manutenção de Computador",
+      "description": "Formação em Hardware abordando montagem e manutenção de computadores, com ênfase em identificação de componentes, seleção de peças adequadas, montagem correta e instalação do sistema operacional Windows 11.",
+      "link": "https://www.udemy.com/course/curso-de-hardware-montagem-e-manutencao-de-computador/?kw=Curso+de+Hardware+-+Montagem+e+Manuten%C3%A7%C3%A3o+de+Computador&src=sac&couponCode=CP250105G1",
+      "duration": "6,5 horas"
+    },
+    "curso4": {
+      "title": "Suporte Técnico na Pratica",
+      "description": "Curso de Suporte Técnico na Prática, abordando identificação e resolução de problemas de TI, atendimento a usuários, criação de máquinas virtuais, clonagem de HD, noções de servidores físicos e Active Directory, além de preparação para entrevistas na área.",
+      "link": "https://www.udemy.com/course/suporte-tecnico/?kw=Suporte+T%C3%A9cnico+na+Pratica&src=sac&couponCode=CP250105G1",
+      "duration": "10 horas"
+    },
+    "curso5": {
+      "title": "Aprenda Microsoft POWER BI em 7 dias + Projetos Reais",
+      "description": "Formação prática em Power BI, abordando criação de relatórios e dashboards de qualidade profissional, preparação e integração de dados de várias fontes, modelagem de dados com DAX, construção de painéis interativos e disponibilização contínua de informações para stakeholders.",
+      "link": "https://www.udemy.com/course/aprenda-power-bi-em-7-dias/?couponCode=CP250105G1",
+      "duration": "7,5 horas"
+    },
+    "curso6": {
+      "title": "RPA para todos: crie seus robôs com Automation Anywhere",
+      "description": "Curso de RPA com Automation Anywhere, aprendendo a criar robôs para automatizar tarefas repetitivas, desenvolver fluxos de trabalho e otimizar processos empresariais para maior eficiência.",
+      "link": "https://www.udemy.com/course/rpa-para-todos-com-automation-anywhere/?couponCode=CP250105G1",
+      "duration": "2 horas"
+    },
+    "curso7": {
+      "title": "Curso de SQL-Server",
+      "description": "Formação completa em SQL, abordando conceitos de bancos de dados relacionais, criação e gerenciamento de tabelas, consultas avançadas, funções, joins, procedimentos armazenados e integração com sistemas.",
+      "link": "https://www.udemy.com/course/curso-de-sql-server/?kw=Curso+de+SQL-Server&src=sac&couponCode=CP250105G1",
+      "duration": "5 horas"
+    },
+    "curso8": {
+      "title": "Node.js do Zero a Maestria com diversos Projetos",
+      "description": "Formação em Node.js abordando desde fundamentos até projetos avançados, criação de APIs com Express, arquitetura MVC, integração com MySQL e MongoDB, e uso de ORMs (Sequelize e Mongoose) para desenvolvimento de aplicações escaláveis.",
+      "link": "https://www.udemy.com/course/nodejs-do-zero-a-maestria-com-diversos-projetos/?kw=Node.js+do+Zero+a+Maestria+com+diversos+Projetos&src=sac&couponCode=CP250105G1",
+      "duration": "38 horas"
+    },
+    "curso9": {
+      "title": "C# Curso Completo: Do Básico ao Avançado!",
+      "description": "Curso completo de C# do básico ao avançado, com foco em desenvolvimento de programas, orientação a objetos, coleções, lambdas, generics, dynamics e demais recursos da linguagem.",
+      "link": "udemy.com/course/curso-c-sharp/?kw=C%23+Curso+Completo%3A+Do+Básico+ao+Avançado&src=sac",
+      "duration": "16,5 horas"
+    },
+    "curso10": {
+      "title": "Especialização em Active Directory - Windows Server 2022",
+      "description": "Formação em Active Directory e Windows Server 2022, abordando administração de usuários e grupos, implementação de domínio Microsoft, configuração de infraestrutura de redes e ambientes de virtualização usando Hyper-V.",
+      "link": "https://www.udemy.com/course/especializacao-em-active-directory-windows-server-2019/?kw=Especializa%C3%A7%C3%A3o+em+Active+Directory+-+Windows+Server+2022&src=sac&couponCode=CP250105G1",
+      "duration": "20,5 horas"
+    },
+    "curso11": {
+      "title": "Microsoft Power BI Para Business Intelligence e Data Science",
+      "description": "Curso avançado de Power BI para Business Intelligence e Data Science, com projetos práticos, modelagem de dados, criação de dashboards interativos e aplicação de técnicas de Machine Learning para análise de dados.",
+      "link": "https://www.udemy.com/course/nodejs-do-zero-a-maestria-com-diversos-projetos/?kw=Node.js+do+Zero+a+Maestria+com+diversos+Projetos&src=sac&couponCode=CP250105G1",
+      "duration": "72 horas"
+    }
+  },
+  "contato.title": "Contato",
+  "contato.description": "Utilize uma das opções abaixo para entrar em contato comigo!"
+}

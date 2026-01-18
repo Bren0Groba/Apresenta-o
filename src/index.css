@@ -1,0 +1,205 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  width: 100%;
+  height: 100%;
+  font-family: 'Poppins', sans-serif;
+}
+
+.mainFund {
+  min-height: 100vh;
+  width: 100%;
+  background-color: #FFF8F2;
+}
+.main{
+  width: 100%;
+
+  padding: 200px;
+  display: flex;
+  
+
+}
+.header{
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  position: fixed;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #FFF8F2;
+}
+.logo{
+
+  height: 80px;
+}
+.nav-links a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+.btnIdioma{
+  margin-left: 10px;
+  padding: 5px 10px;
+  border: none;
+  background-color: #B33842;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 900;
+}
+
+.apresentacao h1{
+  font-size: 80px;
+  font-weight: 900;
+  
+}
+
+.highlight {
+  color: #c0392b; /* vermelho */
+}
+.spanOi{
+  font-weight:lighter;
+  
+  position: relative;
+  padding-left: 48px;
+  font-size: 32px;
+}
+.spanOi::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 32px;
+  height: 2px;
+  background-color: #B33842;
+  transform: translateY(-50%);
+}
+.apresentacao{
+  max-width: 830px;
+}
+.foto{
+  margin-left: 100px;
+}
+.foto img{
+  width: 400px;
+ 
+}
+.courses, .section-contato{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.linha-vermelha {
+  width: 80%;              /* controla o tamanho da linha */
+  height: 4px;             /* espessura */
+  background-color: #c63a3a; /* vermelho semelhante ao da imagem */
+  margin: 100px auto 100px;     /* centraliza e dá espaço abaixo */
+}
+.card {
+  border: 2px solid #a32b32;
+  border-radius: 10px;
+  background: #fff8f3;
+  width: 1300px;
+  
+  margin: 16px auto;
+  overflow: hidden;
+}
+
+.card-header {
+  background: #a32b32;
+  color: white;
+  padding: 16px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  font-weight: bold;
+}
+.card-header h1{
+  font-size: 24px;
+}
+.seta {
+  transition: transform 0.3s ease;
+}
+
+.card.aberto .seta {
+  transform: rotate(180deg);
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 16px;
+  font-weight: bold;
+  color: #a32b32;
+}
+
+.card-footer a {
+  text-decoration: none;
+  color: #a32b32;
+}
+
+.imgCourses{
+  width: 40px;
+  height: 40px;
+  margin-right: 20px;
+}
+.contact-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  background-color: #fdf6ef;
+  padding: 20px 30px;
+  justify-content: center;
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 400px;
+}
+
+.icon-circle {
+  width: 45px;
+  height: 45px;
+  background-color: #9e2a2b; /* vermelho escuro */
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
+.icon-circle icon{
+  width: 23em;
+  height: 23em;
+}
+.contact-text {
+  display: flex;
+  flex-direction: column;
+  font-size: 18px;
+}
+
+strong {
+  font-weight: 900;
+  font-size: 20px;
+}
+
+.contact-text span {
+  color: #000;
+}

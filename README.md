@@ -1,16 +1,50 @@
-# React + Vite
+# Breno Portfolio — versão com Estudos e Cursos
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Projeto React + Vite, sem backend, com dados mockados e estilos separados por seção.
 
-Currently, two official plugins are available:
+## Executar
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Requer Node.js 18+. Abra a pasta `breno-portfolio` no terminal:
 
-## React Compiler
+```bash
+npm install
+npm run dev
+```
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Para gerar a versão de produção:
 
-## Expanding the ESLint configuration
+```bash
+npm run build
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Personalizar
+
+Edite `src/data/portfolio.js` para ajustar seu perfil, contatos, projetos, experiências e cursos. Os cursos são exemplos e não comprovam certificados.
+
+## Estrutura
+
+- `src/App.jsx`: componentes e interações
+- `src/data/portfolio.js`: conteúdo mockado
+- `src/styles/`: CSS separado por área, inclusive `studies.css`
+- `vite.config.js`: plugin React para Vite
+- `public/favicon.svg`: ícone do site
+
+## Melhorias desta versão
+
+- Animações de entrada com IntersectionObserver (sem dependências extras).
+- Efeito 3D com iluminação dinâmica nos cards de projetos, somente em dispositivos com ponteiro.
+- Movimento sutil na ilustração principal e respeito a `prefers-reduced-motion`.
+- Tema salvo no navegador, com fallback seguro quando armazenamento não está disponível.
+- Foco contido no modal e na busca rápida durante a interação com teclado.
+- Rótulos acessíveis para filtros e botões; navegação reduz movimento quando solicitado.
+- Metadados básicos de compartilhamento.
+- CSS adicional isolado em `src/styles/polish.css`.
+
+## Antes de publicar
+
+1. Substitua `seuemail@email.com` em `src/data/portfolio.js` por um endereço real.
+2. Revise as descrições, os links de cada projeto e o status dos cursos mockados.
+3. Rode `npm install` e `npm run build` no seu computador.
+4. Teste o site em telas pequenas e com navegação por teclado.
+
+**Validação:** arquivos JavaScript e JSX analisados com o parser Babel sem erros de sintaxe. O build de produção não foi confirmado porque `npm ci` excedeu o tempo disponível no ambiente de execução.

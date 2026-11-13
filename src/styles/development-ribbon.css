@@ -1,0 +1,48 @@
+.development-ribbon {
+    position: fixed;
+    top: 50%;
+    left: -20%;
+    width: 140%;
+    padding: 20px 0;
+    transform: translateY(-50%) rotate(-16deg);
+    background: linear-gradient(90deg, #6454c9, #277c9a);
+    border-top: 1px solid #ffffff50;
+    border-bottom: 1px solid #ffffff50;
+    box-shadow: 0 10px 50px #0007;
+    z-index: 9999;
+    pointer-events: auto;
+    cursor: pointer;
+    border-left: 0;
+    border-right: 0;
+    font: inherit;
+    transition: filter 0.3s ease;
+    overflow: hidden;
+    text-align: center;
+}
+
+.development-ribbon span {
+    display: block;
+    color: #fff;
+    font-family: monospace;
+    font-size: clamp(14px, 2.5vw, 26px);
+    font-weight: 800;
+    letter-spacing: 0.25em;
+    white-space: nowrap;
+    text-shadow: 0 2px 12px #0005;
+}
+
+@media (max-width: 600px) {
+    .development-ribbon {
+        left: -35%;
+        width: 170%;
+        padding: 14px 0;
+    }
+}
+.development-ribbon:hover {
+    filter: brightness(1.2);
+  }
+  
+  .development-ribbon:focus-visible {
+    outline: 3px solid #fff;
+    outline-offset: 4px;
+  }

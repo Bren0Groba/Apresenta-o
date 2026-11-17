@@ -1,0 +1,63 @@
+/* Cantos arredondados nos dois temas, sem alterar a identidade de cada um. */
+:root {
+  --ui-radius: 14px;
+  --ui-radius-lg: 20px;
+}
+
+.brand-mark,
+.icon-button,
+.resume-button,
+.primary-button,
+.filter-chip,
+.study-filter,
+.skill-card,
+.info-card,
+.quote-card,
+.study-degree,
+.study-course,
+.project-card,
+.code-window,
+.project-modal,
+.command-palette,
+.availability,
+.back-top,
+.project-zoom,
+.modal-art,
+.palette-search kbd,
+.palette-results button,
+.skill-tags span,
+.project-stack span {
+  border-radius: var(--ui-radius) !important;
+}
+
+.project-card,
+.code-window,
+.project-modal,
+.command-palette,
+.study-degree,
+.study-course {
+  border-radius: var(--ui-radius-lg) !important;
+}
+
+.project-card,
+.code-window,
+.command-palette {
+  overflow: hidden;
+}
+
+/* A faixa continua diagonal e clicável, mas agora com cantos arredondados. */
+.development-ribbon {
+  border-radius: 12px !important;
+}
+
+/* Arredondamento também nos elementos internos dos cards. */
+.project-visual {
+  border-radius: var(--ui-radius-lg) var(--ui-radius-lg) 0 0;
+}
+
+@media (max-width: 600px) {
+  :root {
+    --ui-radius: 11px;
+    --ui-radius-lg: 15px;
+  }
+}

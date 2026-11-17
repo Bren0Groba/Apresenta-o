@@ -1,1 +1,140 @@
-.contact-section{min-height:650px;border-top:1px solid var(--line);display:flex;flex-direction:column;justify-content:center;overflow:hidden}.contact-content{position:relative;z-index:1;max-width:650px}.contact-content .section-heading{margin-bottom:25px}.contact-content .section-heading h2{font-size:clamp(38px,5vw,62px)}.contact-content>p{max-width:470px;color:var(--muted);font-size:14px;line-height:1.8}.contact-email{margin-top:25px;display:flex;align-items:center;gap:12px;background:var(--panel);border:1px solid var(--line);padding:16px 18px;border-radius:4px;font-size:13px;cursor:pointer;transition:border .2s}.contact-email:hover{border-color:var(--cyan)}.contact-email>svg{color:var(--cyan)}.contact-email span{margin-left:25px;color:var(--muted);display:flex;align-items:center;font:9px var(--font-mono)}.social-links{display:flex;gap:22px;margin-top:30px;flex-wrap:wrap}.social-links a{display:flex;align-items:center;gap:7px;font-size:11px;color:var(--muted);transition:color .2s}.social-links a:hover{color:var(--cyan)}.contact-decoration{position:absolute;right:-20px;top:50%;transform:translateY(-60%);font-size:clamp(100px,18vw,230px);line-height:.8;font-weight:800;letter-spacing:-.12em;color:transparent;-webkit-text-stroke:1px var(--line);pointer-events:none}.contact-decoration span{font-size:.25em;color:var(--accent);-webkit-text-stroke:0;vertical-align:top}.site-footer{display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--line);padding-top:22px;margin-top:110px;gap:20px}.site-footer>span{font-size:8px}.site-footer .brand{font-size:12px}@media(max-width:760px){.contact-decoration{right:-45px;top:25%;opacity:.55}.site-footer{align-items:flex-start;flex-direction:column;margin-top:80px}.contact-email{font-size:11px}.contact-email span{margin-left:auto}}
+.contact-section {
+    min-height: 650px;
+    border-top: 1px solid var(--line);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden
+}
+
+.contact-content {
+    position: relative;
+    z-index: 1;
+    max-width: 650px
+}
+
+.contact-content .section-heading {
+    margin-bottom: 25px
+}
+
+.contact-content .section-heading h2 {
+    font-size: clamp(38px, 5vw, 62px)
+}
+
+.contact-content>p {
+    max-width: 470px;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.8
+}
+
+.contact-email {
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: var(--panel);
+    border: 1px solid var(--line);
+    padding: 16px 18px;
+    border-radius: 4px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: border .2s
+}
+
+.contact-email:hover {
+    border-color: var(--cyan)
+}
+
+.contact-email>svg {
+    color: var(--cyan)
+}
+
+.contact-email span {
+    margin-left: 25px;
+    color: var(--muted);
+    display: flex;
+    align-items: center;
+    font: 9px var(--font-mono)
+}
+
+.social-links {
+    display: flex;
+    gap: 22px;
+    margin-top: 30px;
+    flex-wrap: wrap
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 11px;
+    color: var(--muted);
+    transition: color .2s
+}
+
+.social-links a:hover {
+    color: var(--cyan)
+}
+
+.contact-decoration {
+    position: absolute;
+    right: -20px;
+    top: 50%;
+    transform: translateY(-60%);
+    font-size: clamp(100px, 18vw, 230px);
+    line-height: .8;
+    font-weight: 800;
+    letter-spacing: -.12em;
+    color: transparent;
+    -webkit-text-stroke: 1px var(--line);
+    pointer-events: none
+}
+
+.contact-decoration span {
+    font-size: .25em;
+    color: var(--accent);
+    -webkit-text-stroke: 0;
+    vertical-align: top
+}
+
+.site-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid var(--line);
+    padding-top: 22px;
+    margin-top: 110px;
+    gap: 20px
+}
+
+.site-footer>span {
+    font-size: 8px
+}
+
+.site-footer .brand {
+    font-size: 12px
+}
+
+@media(max-width:760px) {
+    .contact-decoration {
+        right: -45px;
+        top: 25%;
+        opacity: .55
+    }
+
+    .site-footer {
+        align-items: flex-start;
+        flex-direction: column;
+        margin-top: 80px
+    }
+
+    .contact-email {
+        font-size: 11px
+    }
+
+    .contact-email span {
+        margin-left: auto
+    }
+}

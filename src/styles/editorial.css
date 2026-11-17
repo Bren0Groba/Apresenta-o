@@ -1,0 +1,54 @@
+/* Tema claro: somente cores. Layout, fontes, medidas e efeitos sao compartilhados. */
+body.light-theme {
+  color-scheme: light;
+  --bg: #eae7de;
+  --panel: #f5f2e9;
+  --panel-2: #dfdcd2;
+  --text: #20221f;
+  --muted: #666b62;
+  --line: rgba(54, 55, 49, .24);
+  --accent: #c34a2c;
+  --cyan: #a53d27;
+  --green: #496a52;
+}
+
+/* Elementos que no tema original utilizam cores fixas ou gradientes. */
+body.light-theme .topbar {
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+}
+
+body.light-theme .gradient-text {
+  background: linear-gradient(100deg, #a53d27, #c46b44);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+body.light-theme .ambient-one {
+  background: #b78a6b;
+}
+
+body.light-theme .ambient-two {
+  background: #a9a17a;
+}
+
+body.light-theme .modal-art {
+  background: linear-gradient(135deg, #e1d6c7, #eee5d9);
+}
+
+body.light-theme .modal-backdrop {
+  background: rgba(33, 31, 28, .72);
+}
+
+body.light-theme .palette-backdrop {
+  background: rgba(33, 31, 28, .72);
+}
+
+body.light-theme .scroll-progress {
+  background: linear-gradient(90deg, var(--accent), #d18b5c);
+}
+
+body.light-theme ::selection {
+  background: var(--accent);
+  color: white;
+}

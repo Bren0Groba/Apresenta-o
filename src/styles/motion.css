@@ -1,11 +1,349 @@
 /* Motion layer: progressive enhancement, no external animation runtime. */
-.reveal{opacity:0;transform:translateY(30px);transition:opacity .75s ease,transform .75s cubic-bezier(.2,.8,.2,1)}.reveal.revealed{opacity:1;transform:translateY(0)}
-.hero-copy{animation:hero-enter .85s cubic-bezier(.2,.8,.2,1) both}@keyframes hero-enter{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
-.project-card{--tilt-x:0deg;--tilt-y:0deg;--glow-x:50%;--glow-y:50%;transform:perspective(1100px) rotateX(var(--tilt-x)) rotateY(var(--tilt-y));transition:transform .25s ease,border-color .25s;position:relative;isolation:isolate}
-.project-card::after{content:"";position:absolute;inset:0;pointer-events:none;z-index:1;background:radial-gradient(340px circle at var(--glow-x) var(--glow-y),rgba(153,135,255,.13),transparent 70%);opacity:0;transition:opacity .2s}
-.project-card:hover::after{opacity:1}.project-card:hover{transform:perspective(1100px) rotateX(var(--tilt-x)) rotateY(var(--tilt-y)) translateY(-3px)}
-.primary-button svg,.text-button svg,.social-links svg:last-child{transition:transform .25s}.primary-button:hover svg,.text-button:hover svg,.social-links a:hover svg:last-child{transform:translate(3px,-3px)}
-.hero-art{height:auto;min-height:460px}.playground{width:100%;max-width:470px;border:1px solid var(--line);background:var(--panel);border-radius:12px;padding:15px;box-shadow:0 30px 90px #0005;animation:hero-enter .9s .2s both}.playground-heading{display:flex;justify-content:space-between;gap:12px;font:9px var(--font-mono);letter-spacing:.1em;color:var(--muted);padding:5px 5px 16px}.playground-heading span:first-child{color:var(--cyan);display:flex;align-items:center;gap:7px}.playground-stage{position:relative;overflow:hidden;height:300px;border:1px solid var(--line);border-radius:7px;background:radial-gradient(circle at var(--px) var(--py),#6354b635,transparent 42%),linear-gradient(140deg,#16162b,#0a1722);display:grid;place-items:center;isolation:isolate;touch-action:pan-y}.playground-grid{position:absolute;inset:0;background-image:linear-gradient(#ffffff0b 1px,transparent 1px),linear-gradient(90deg,#ffffff0b 1px,transparent 1px);background-size:26px 26px;mask-image:radial-gradient(ellipse,#000 10%,transparent 80%)}.playground-ring{position:absolute;width:190px;height:190px;border:1px solid #a99aff65;border-radius:50%;animation:spin calc(15s / var(--energy) * 3) linear infinite}.ring-one{transform:rotate(60deg) scaleY(.47)}.ring-two{border-color:#79d9e899;animation-direction:reverse;animation-duration:calc(20s / var(--energy) * 3)}.playground-ring::before{content:"";position:absolute;top:22px;left:22px;width:11px;height:11px;border-radius:50%;background:var(--cyan);box-shadow:0 0 20px var(--cyan)}.playground-core{position:relative;z-index:2;width:90px;height:90px;display:grid;place-items:center;border:1px solid #a99aff88;border-radius:23px;color:#d5cbff;background:linear-gradient(145deg,#30255a,#152c3a);box-shadow:0 0 70px #9b8cff44;transform:translate(calc((var(--px) - 50%) * .12),calc((var(--py) - 50%) * .12));transition:transform .18s}.playground-particle{position:absolute;width:5px;height:5px;border-radius:50%;background:#a99aff;left:calc(12% + var(--i) * 9%);top:calc(15% + var(--i) * 9%);opacity:.7;animation:float 2.5s ease-in-out infinite alternate;animation-delay:calc(var(--i) * -.35s)}.playground-coordinates,.playground-tip{position:absolute;bottom:13px;color:#a8b4ce;font:9px var(--font-mono);letter-spacing:.06em}.playground-coordinates{left:14px}.playground-tip{right:14px}.playground-controls{display:flex;align-items:center;justify-content:space-between;gap:14px;padding-top:15px;flex-wrap:wrap}.playground-modes{display:flex;gap:5px}.playground-modes button{border:1px solid var(--line);background:transparent;border-radius:4px;color:var(--muted);font:10px var(--font-mono);padding:9px 10px;cursor:pointer}.playground-modes button.selected{background:var(--text);color:var(--bg)}.energy-control{display:flex;align-items:center;gap:7px;font:9px var(--font-mono);color:var(--muted)}.energy-control input{width:65px;accent-color:var(--accent)}.energy-control output{min-width:24px}.mode-pulse .playground-core{animation:core-pulse calc(3s / var(--energy) * 3) ease-in-out infinite}.mode-pulse .playground-ring{animation:core-pulse calc(4s / var(--energy) * 3) ease-in-out infinite}.mode-focus .playground-ring{width:120px;height:120px;border-style:dashed}.mode-focus .playground-core{border-radius:50%;box-shadow:0 0 95px #79d9e888}.mode-focus .playground-stage{background:radial-gradient(circle at var(--px) var(--py),#79d9e833,transparent 35%),#101b29}
-@keyframes spin{from{rotate:0deg}to{rotate:360deg}}@keyframes float{to{translate:0 -25px;opacity:.2}}@keyframes core-pulse{50%{scale:1.18;opacity:.65}}
-@media(max-width:900px){.hero-art{min-height:390px}.playground{margin:auto}}@media(max-width:560px){.hero-art{min-height:350px}.playground-stage{height:230px}.playground-tip{font-size:7px}.playground-controls{align-items:flex-start}}
-@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none}.hero-copy,.playground{animation:none}.playground-ring,.playground-particle,.mode-pulse .playground-core{animation:none}.project-card,.project-card:hover{transform:none}.playground-core{transition:none}}
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity .75s ease, transform .75s cubic-bezier(.2, .8, .2, 1)
+}
+
+.reveal.revealed {
+    opacity: 1;
+    transform: translateY(0)
+}
+
+.hero-copy {
+  
+    animation: hero-enter .85s cubic-bezier(.2, .8, .2, 1) both
+}
+
+@keyframes hero-enter {
+    from {
+        opacity: 0;
+        transform: translateY(26px)
+    }
+
+    to {
+        opacity: 1;
+        transform: none
+    }
+}
+
+.project-card {
+    --tilt-x: 0deg;
+    --tilt-y: 0deg;
+    --glow-x: 50%;
+    --glow-y: 50%;
+    transform: perspective(1100px) rotateX(var(--tilt-x)) rotateY(var(--tilt-y));
+    transition: transform .25s ease, border-color .25s;
+    position: relative;
+    isolation: isolate
+}
+
+.project-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+    background: radial-gradient(340px circle at var(--glow-x) var(--glow-y), rgba(153, 135, 255, .13), transparent 70%);
+    opacity: 0;
+    transition: opacity .2s
+}
+
+.project-card:hover::after {
+    opacity: 1
+}
+
+.project-card:hover {
+    transform: perspective(1100px) rotateX(var(--tilt-x)) rotateY(var(--tilt-y)) translateY(-3px)
+}
+
+.primary-button svg,
+.text-button svg,
+.social-links svg:last-child {
+    transition: transform .25s
+}
+
+.primary-button:hover svg,
+.text-button:hover svg,
+.social-links a:hover svg:last-child {
+    transform: translate(3px, -3px)
+}
+
+.hero-art {
+    height: auto;
+    min-height: 460px
+}
+
+.playground {
+    width: 100%;
+    max-width: 470px;
+    border: 1px solid var(--line);
+    background: var(--panel);
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 30px 90px #0005;
+    animation: hero-enter .9s .2s both
+}
+
+.playground-heading {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    font: 9px var(--font-mono);
+    letter-spacing: .1em;
+    color: var(--muted);
+    padding: 5px 5px 16px
+}
+
+.playground-heading span:first-child {
+    color: var(--cyan);
+    display: flex;
+    align-items: center;
+    gap: 7px
+}
+
+.playground-stage {
+    position: relative;
+    overflow: hidden;
+    height: 300px;
+    border: 1px solid var(--line);
+    border-radius: 7px;
+    background: radial-gradient(circle at var(--px) var(--py), #6354b635, transparent 42%), linear-gradient(140deg, #16162b, #0a1722);
+    display: grid;
+    place-items: center;
+    isolation: isolate;
+    touch-action: pan-y
+}
+
+.playground-grid {
+    position: absolute;
+    inset: 0;
+    background-image: linear-gradient(#ffffff0b 1px, transparent 1px), linear-gradient(90deg, #ffffff0b 1px, transparent 1px);
+    background-size: 26px 26px;
+    mask-image: radial-gradient(ellipse, #000 10%, transparent 80%)
+}
+
+.playground-ring {
+    position: absolute;
+    width: 190px;
+    height: 190px;
+    border: 1px solid #a99aff65;
+    border-radius: 50%;
+    animation: spin calc(15s / var(--energy) * 3) linear infinite
+}
+
+.ring-one {
+    transform: rotate(60deg) scaleY(.47)
+}
+
+.ring-two {
+    border-color: #79d9e899;
+    animation-direction: reverse;
+    animation-duration: calc(20s / var(--energy) * 3)
+}
+
+.playground-ring::before {
+    content: "";
+    position: absolute;
+    top: 22px;
+    left: 22px;
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background: var(--cyan);
+    box-shadow: 0 0 20px var(--cyan)
+}
+
+.playground-core {
+    position: relative;
+    z-index: 2;
+    width: 90px;
+    height: 90px;
+    display: grid;
+    place-items: center;
+    border: 1px solid #a99aff88;
+    border-radius: 23px;
+    color: #d5cbff;
+    background: linear-gradient(145deg, #30255a, #152c3a);
+    box-shadow: 0 0 70px #9b8cff44;
+    transform: translate(calc((var(--px) - 50%) * .12), calc((var(--py) - 50%) * .12));
+    transition: transform .18s
+}
+
+.playground-particle {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #a99aff;
+    left: calc(12% + var(--i) * 9%);
+    top: calc(15% + var(--i) * 9%);
+    opacity: .7;
+    animation: float 2.5s ease-in-out infinite alternate;
+    animation-delay: calc(var(--i) * -.35s)
+}
+
+.playground-coordinates,
+.playground-tip {
+    position: absolute;
+    bottom: 13px;
+    color: #a8b4ce;
+    font: 9px var(--font-mono);
+    letter-spacing: .06em
+}
+
+.playground-coordinates {
+    left: 14px
+}
+
+.playground-tip {
+    right: 14px
+}
+
+.playground-controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    padding-top: 15px;
+    flex-wrap: wrap
+}
+
+.playground-modes {
+    display: flex;
+    gap: 5px
+}
+
+.playground-modes button {
+    border: 1px solid var(--line);
+    background: transparent;
+    border-radius: 4px;
+    color: var(--muted);
+    font: 10px var(--font-mono);
+    padding: 9px 10px;
+    cursor: pointer
+}
+
+.playground-modes button.selected {
+    background: var(--text);
+    color: var(--bg)
+}
+
+.energy-control {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    font: 9px var(--font-mono);
+    color: var(--muted)
+}
+
+.energy-control input {
+    width: 65px;
+    accent-color: var(--accent)
+}
+
+.energy-control output {
+    min-width: 24px
+}
+
+.mode-pulse .playground-core {
+    animation: core-pulse calc(3s / var(--energy) * 3) ease-in-out infinite
+}
+
+.mode-pulse .playground-ring {
+    animation: core-pulse calc(4s / var(--energy) * 3) ease-in-out infinite
+}
+
+.mode-focus .playground-ring {
+    width: 120px;
+    height: 120px;
+    border-style: dashed
+}
+
+.mode-focus .playground-core {
+    border-radius: 50%;
+    box-shadow: 0 0 95px #79d9e888
+}
+
+.mode-focus .playground-stage {
+    background: radial-gradient(circle at var(--px) var(--py), #79d9e833, transparent 35%), #101b29
+}
+
+@keyframes spin {
+    from {
+        rotate: 0deg
+    }
+
+    to {
+        rotate: 360deg
+    }
+}
+
+@keyframes float {
+    to {
+        translate: 0 -25px;
+        opacity: .2
+    }
+}
+
+@keyframes core-pulse {
+    50% {
+        scale: 1.18;
+        opacity: .65
+    }
+}
+
+@media(max-width:900px) {
+    .hero-art {
+        min-height: 390px
+    }
+
+    .playground {
+        margin: auto
+    }
+}
+
+@media(max-width:560px) {
+    .hero-art {
+        min-height: 350px
+    }
+
+    .playground-stage {
+        height: 230px
+    }
+
+    .playground-tip {
+        font-size: 7px
+    }
+
+    .playground-controls {
+        align-items: flex-start
+    }
+}
+
+@media(prefers-reduced-motion:reduce) {
+    .reveal {
+        opacity: 1;
+        transform: none
+    }
+
+    .hero-copy,
+    .playground {
+        animation: none
+    }
+
+    .playground-ring,
+    .playground-particle,
+    .mode-pulse .playground-core {
+        animation: none
+    }
+
+    .project-card,
+    .project-card:hover {
+        transform: none
+    }
+
+    .playground-core {
+        transition: none
+    }
+}

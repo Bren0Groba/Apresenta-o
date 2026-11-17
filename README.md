@@ -48,3 +48,7 @@ Edite `src/data/portfolio.js` para ajustar seu perfil, contatos, projetos, exper
 4. Teste o site em telas pequenas e com navegação por teclado.
 
 **Validação:** arquivos JavaScript e JSX analisados com o parser Babel sem erros de sintaxe. O build de produção não foi confirmado porque `npm ci` excedeu o tempo disponível no ambiente de execução.
+
+
+## Identidade editorial (novembro de 2026)
+O arquivo `src/styles/editorial.css` é a camada visual final: papel/tinta, tipografia serifada, cor terracota e elementos de arquivo técnico. Mantém os CSS separados por seção. O botão de tema alterna entre papel claro e tinta escura. A faixa de desenvolvimento continua clicável.
